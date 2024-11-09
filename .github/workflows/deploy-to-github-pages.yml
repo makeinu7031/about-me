@@ -16,6 +16,7 @@ jobs:
           node-version: "20"
       # Pick your own package manager and build script
       - run: pwd
+      - run: ls
       - run: yarn --cwd ./about-me/front install
       - run: yarn --cwd ./about-me/front run build --preset github_pages
       - name: Upload artifact
