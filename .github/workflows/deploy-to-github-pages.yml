@@ -15,8 +15,9 @@ jobs:
         with:
           node-version: "20"
       # Pick your own package manager and build script
-      - run: yarn --cwd ./front install
-      - run: yarn --cwd ./front run build --preset github_pages
+      - run: pwd
+      - run: yarn --cwd ./about-me/front install
+      - run: yarn --cwd ./about-me/front run build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
